@@ -1,16 +1,24 @@
-# led_node_mcq
 
-A new Flutter project.
+Smart Water Pump Control System
 
-## Getting Started
+This project enables remote control of water pump motors using an ESP8266 NodeMCU, MQTT protocol, and a relay module. The system utilizes HiveMQ's public MQTT broker for secure and reliable communication.
 
-This project is a starting point for a Flutter application.
+Key Features:
+Remote Control: Operate water pumps from anywhere using MQTT commands.
 
-A few resources to get you started if this is your first Flutter project:
+Web-Based Control: Integrate with a Flutter application for real-time control.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Safety: Uses a relay module to handle high-voltage water pump motors safely.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Secure Communication: Future support for SSL/TLS to enhance data security.
+
+Components:
+*) ESP8266 NodeMCU: Microcontroller for WiFi and MQTT communication. 
+*) Relay Module: Controls high-voltage water pump motors.
+*) HiveMQ Broker: Public MQTT broker for message routing.
+Setup:
+Hardware: Connect the NodeMCU to a relay module and water pump.
+Software: Use the provided code to configure the NodeMCU and control the relay via MQTT.
+Flutter App: Interact with the system remotely through a mobile application.
+
+
