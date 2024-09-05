@@ -2,18 +2,18 @@
 #include <PubSubClient.h>
 
 // Replace with your network credentials
-const char* ssid = "703";
-const char* password = "703_boys";
+const char* ssid = "";
+const char* password = "";
 
 // HiveMQ public broker details
-const char* mqtt_server = "broker.hivemq.com";
-const int mqtt_port = 1883;
+const char* mqtt_server = "";
+const int mqtt_port = ;
 
 WiFiClient espClient;
 PubSubClient client(espClient);
 
 // Replace with your unique client ID
-const char* clientId = "nodeMCU_12345678_1";
+const char* clientId = "";
 
 // Publishing interval
 const long publishInterval = 5000; // 5 seconds
@@ -31,7 +31,7 @@ void setup() {
 
   if (client.connect(clientId)) {
     Serial.println("Connected to MQTT broker");
-    client.subscribe("Omkar_Guha_motor"); // Update to your topic
+    client.subscribe(""); // Update to your topic
   } else {
     Serial.print("Failed to connect, rc=");
     Serial.print(client.state());
@@ -49,7 +49,7 @@ void loop() {
   unsigned long currentMillis = millis();
   if (currentMillis - lastPublishTime >= publishInterval) {
     lastPublishTime = currentMillis;
-    client.publish("Omkar_Guha_motor", "Hello Motor_Guha"); // Update to your topic
+    client.publish("", ""); // Update to your topic
   }
 }
 
@@ -72,7 +72,7 @@ void reconnect() {
     Serial.print("Attempting MQTT connection...");
     if (client.connect(clientId)) {
       Serial.println("connected");
-      client.subscribe("your/topic"); // Update to your topic
+      client.subscribe(""); // Update to your topic
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
